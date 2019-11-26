@@ -36,7 +36,7 @@ extension Image {
         #if os(OSX)
             return data(.jpeg)
         #else
-            return self.jpegData(compressionQuality: 1)
+            return UIImageJPEGRepresentation(image, 1)
         #endif
     }
 }
